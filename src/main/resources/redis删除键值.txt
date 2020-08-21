@@ -1,0 +1,42 @@
+product-price
+云中心id
+common
+删除命令：
+redis-cli -a 1qaz2wsx keys 262* | xargs redis-cli -a 1qaz2wsx DEL
+redis-cli -a 1qaz2wsx keys product-price* | xargs redis-cli -a 1qaz2wsx DEL
+redis-cli -a 1qaz2wsx keys common* | xargs redis-cli -a 1qaz2wsx DEL
+
+
+订单审批：10.221.2.21:8768/order/approve/updateApproveInfo/list/centerId?centerId=51
+调用定时任务：10.221.2.21:8767/order-schedule/specifyDatebills?centerId=51&date1=2020-05-01&date2=2020-05-31
+查询是否审核（查不出来就是审核完了）：
+SELECT
+	a.order_id orderId,
+	a.center_id centerId
+FROM
+	order_main_new a
+	LEFT JOIN rpt_order_approval d ON a.order_id = d.orderid 
+	AND d.centerid = a.center_id 
+WHERE
+	1 = 1 
+	AND ( d.`status` IS NULL OR d.`status` NOT IN ( 'adopt' ) ) 
+	AND a.center_id IN ('51')
+
+查询指定云中账单是否有问题：
+http://10.221.2.21:8764/account/manager/instance&bill?startTime=2020-05-01&endTime=2020-06-31&centerId=
+
+查询是否有错误sql:
+SELECT
+	a.centerid "云中心ID",
+	pcc.NAME "云中心名称",
+	a.date "日期",
+	a.instanceNum "理论账单数",
+	a.billNum "实际账单数",
+	(a.instanceNum - a.billNum) "错误账单数"
+FROM
+	account_bill_state a
+	LEFT JOIN product_cloud_center pcc ON pcc.id = a.centerid 
+WHERE
+	1 = 1 
+-- 	AND a.instanceNum != a.billNum 
+	AND a.centerId = "59"

@@ -1,0 +1,233 @@
+### 测试单次专用
+#GET 127.0.0.1:8149/deliver/contract/synchronize/getAllSyncDataSum?lastMonth=2020-06
+GET http://10.221.2.21:8766/deliver/contract/synchronize/getAllSyncDataSum?lastMonth=2020-06
+
+### 批量审核
+GET http://api.inspurbss.inspurcloud.cn/order/approve/updateApproveInfo/list/centerId?centerId=94
+Accept: application/json
+
+### 出某个云中心的账单
+### 临时
+GET 10.221.2.21:8767/order-schedule/specifyDatebills?centerId=285&date1=2020-06-01&date2=2020-06-30
+### 重庆1
+GET 10.221.2.21:8767/order-schedule/specifyDatebills?centerId=16&date1=2020-06-01&date2=2020-06-02
+### 昆明1
+GET 10.221.2.21:8767/order-schedule/specifyDatebills?centerId=303&date1=2020-06-01&date2=2020-06-10
+### 昆明2
+GET 10.221.2.21:8767/order-schedule/specifyDatebills?centerId=303&date1=2020-06-11&date2=2020-06-20
+### 昆明3
+GET 10.221.2.21:8767/order-schedule/specifyDatebills?centerId=303&date1=2020-06-21&date2=2020-06-30
+### 济南1
+GET 10.221.2.21:8767/order-schedule/specifyDatebills?centerId=170&date1=2020-06-01&date2=2020-06-10
+### 济南2
+GET 10.221.2.21:8767/order-schedule/specifyDatebills?centerId=170&date1=2020-06-11&date2=2020-06-20
+### 济南3
+GET 10.221.2.21:8767/order-schedule/specifyDatebills?centerId=170&date1=2020-06-21&date2=2020-06-30
+### 以下为审核通过的服务目录类的云中心
+### 百色
+GET 10.221.2.21:8767/order-schedule/specifyDatebills?centerId=262&date1=2020-07-01&date2=2020-07-12
+### 保定
+GET 10.221.2.21:8767/order-schedule/specifyDatebills?centerId=42&date1=2020-07-01&date2=2020-07-12
+### 德州
+GET 10.221.2.21:8767/order-schedule/specifyDatebills?centerId=183&date1=2020-07-01&date2=2020-07-12
+### 海南
+GET 10.221.2.21:8767/order-schedule/specifyDatebills?centerId=22&date1=2020-07-01&date2=2020-07-12
+### 呼和浩特
+GET 10.221.2.21:8767/order-schedule/specifyDatebills?centerId=59&date1=2020-07-01&date2=2020-07-12
+### 黄冈
+GET 10.221.2.21:8767/order-schedule/specifyDatebills?centerId=213&date1=2020-07-01&date2=2020-07-12
+### 焦作
+GET 10.221.2.21:8767/order-schedule/specifyDatebills?centerId=194&date1=2020-07-01&date2=2020-07-12
+### 晋中
+GET 10.221.2.21:8767/order-schedule/specifyDatebills?centerId=54&date1=2020-07-01&date2=2020-07-12
+### 绵阳
+GET 10.221.2.21:8767/order-schedule/specifyDatebills?centerId=278&date1=2020-07-01&date2=2020-07-12
+### 四川
+GET 10.221.2.21:8767/order-schedule/specifyDatebills?centerId=24&date1=2020-07-01&date2=2020-07-12
+### 泰安
+GET 10.221.2.21:8767/order-schedule/specifyDatebills?centerId=178&date1=2020-07-01&date2=2020-07-12
+### 天津
+GET 10.221.2.21:8767/order-schedule/specifyDatebills?centerId=3&date1=2020-07-01&date2=2020-07-12
+### 新余
+GET 10.221.2.21:8767/order-schedule/specifyDatebills?centerId=163&date1=2020-07-01&date2=2020-07-12
+### 宜宾
+GET 10.221.2.21:8767/order-schedule/specifyDatebills?centerId=285&date1=2020-07-01&date2=2020-07-12
+### 张家口
+GET 10.221.2.21:8767/order-schedule/specifyDatebills?centerId=43&date1=2020-07-01&date2=2020-07-12
+### 淄博
+GET 10.221.2.21:8767/order-schedule/specifyDatebills?centerId=172&date1=2020-07-01&date2=2020-07-12
+
+
+### 出某个订单的账单
+GET 10.221.2.21:8767/order-schedule/specifyDatebills/order?centerId=51&orderId=CHZH-201901-018-BG01&date1=2020-06-01&date2=2020-06-30
+
+
+
+### 刷交付收入报表
+GET http://api.inspurbss.inspurcloud.cn/deliver/income/report/renewIncomeTime?centerId=22
+### 刷交付收入报表2
+#GET http://api.inspurbss.inspurcloud.cn/deliver/income/report/sumincome?centerId=22&startTime=2020-07-01&endTime=2020-07-31
+### 百色
+GET http://api.inspurbss.inspurcloud.cn/deliver/income/report/sumincome?centerId=262&startTime=2020-07-01&endTime=2020-07-31
+### 保定
+GET http://api.inspurbss.inspurcloud.cn/deliver/income/report/sumincome?centerId=42&startTime=2020-07-01&endTime=2020-07-31
+### 德州
+GET http://api.inspurbss.inspurcloud.cn/deliver/income/report/sumincome?centerId=183&startTime=2020-07-01&endTime=2020-07-31
+### 海南
+GET http://api.inspurbss.inspurcloud.cn/deliver/income/report/sumincome?centerId=22&startTime=2020-07-01&endTime=2020-07-31
+### 呼和浩特
+GET http://api.inspurbss.inspurcloud.cn/deliver/income/report/sumincome?centerId=59&startTime=2020-07-01&endTime=2020-07-31
+### 黄冈
+GET http://api.inspurbss.inspurcloud.cn/deliver/income/report/sumincome?centerId=213&startTime=2020-07-01&endTime=2020-07-31
+### 焦作
+GET http://api.inspurbss.inspurcloud.cn/deliver/income/report/sumincome?centerId=194&startTime=2020-07-01&endTime=2020-07-31
+### 晋中
+GET http://api.inspurbss.inspurcloud.cn/deliver/income/report/sumincome?centerId=54&startTime=2020-07-01&endTime=2020-07-31
+### 绵阳
+GET http://api.inspurbss.inspurcloud.cn/deliver/income/report/sumincome?centerId=278&startTime=2020-07-01&endTime=2020-07-31
+### 四川
+GET http://api.inspurbss.inspurcloud.cn/deliver/income/report/sumincome?centerId=24&startTime=2020-07-01&endTime=2020-07-31
+### 泰安
+GET http://api.inspurbss.inspurcloud.cn/deliver/income/report/sumincome?centerId=178&startTime=2020-07-01&endTime=2020-07-31
+### 天津
+GET http://api.inspurbss.inspurcloud.cn/deliver/income/report/sumincome?centerId=3&startTime=2020-07-01&endTime=2020-07-31
+### 新余
+GET http://api.inspurbss.inspurcloud.cn/deliver/income/report/sumincome?centerId=163&startTime=2020-07-01&endTime=2020-07-31
+### 宜宾
+GET http://api.inspurbss.inspurcloud.cn/deliver/income/report/sumincome?centerId=285&startTime=2020-07-01&endTime=2020-07-31
+### 张家口
+GET http://api.inspurbss.inspurcloud.cn/deliver/income/report/sumincome?centerId=43&startTime=2020-07-01&endTime=2020-07-31
+### 淄博
+GET http://api.inspurbss.inspurcloud.cn/deliver/income/report/sumincome?centerId=172&startTime=2020-07-01&endTime=2020-07-31
+
+### 删除订单接口
+# orderId	 订单号	  centerId	 云中心id
+DELETE http://10.221.2.21.xip.io:9081/order/fix/order?orderId=KM-BLORD-20200521-3278123&centerId=303
+
+### 刷新redis权限接口
+POST http://api.inspurbss.inspurcloud.cn/bss/manage/inner/refresh/users
+Content-Type: application/json
+
+{}
+### 刷新redis权限接口敏捷环境
+POST http://10.221.2.21.xip.io:9081/bss/manage/inner/refresh/users
+Content-Type: application/json
+
+{"userId": "5081bfb5-52ed-458f-877c-3c3508d50734"}
+
+### 刷新redis权限接口华北三敏捷环境
+#POST http://10.221.2.21.xip.io:9080/bss/manage/inner/refresh/users
+POST http://10.221.2.21:8099/bss/manage/inner/refresh/users
+Content-Type: application/json
+
+{"userId": "93d39504-980f-432d-9a80-67f2d02694ad"}
+
+###
+
+### Spring security OAuth2 端点（endpoints）
+### 获取token grant_type=client_credentials
+POST http://localhost:8089/oauth/token
+Content-type: application/x-www-form-urlencoded
+
+grant_type=client_credentials&client_id=client_bss&client_secret=123456a?&scope=all
+### 获取token grant_type=client_credentials
+GET http://localhost:8089/oauth/token?grant_type=client_credentials&client_id=client_bss&client_secret=123456a?&scope=all
+### 取token grant_type=password
+GET http://localhost:8089/oauth/token?grant_type=password&client_id=client_bss&client_secret=123456a?&scope=all&username=谷润东&password=123456
+### 获取token grant_type=password
+POST http://localhost:8089/oauth/token
+Content-type: application/x-www-form-urlencoded
+
+grant_type=password&username=谷润东&password=123456&scope=all&client_id=client_bss&client_secret=123456a?
+### 检验token: check_token
+GET http://localhost:8089/oauth/check_token?token=a3d14ebe-b956-4c35-9faa-15a321453837
+
+### 退出
+DELETE http://localhost:8089/token/logout
+Authorization: Bearer 40edad39-dd77-4b1c-99c7-2109686696b8
+
+###
+GET http://localhost:8089/oauth/token?username=user_1&password=123456&grant_type=password&scope=all&client_id=client_bss&client_secret=123456a?
+
+
+### account相关
+GET 127.0.0.1:8762/account/manager/bill/instance/list/totalprice?startMonth=202007&endMonth=202007
+
+### 合同与商机相关
+### crm同步给mbss合同接口
+POST http://117.73.13.196:30013/cmc/busiopts/contract/create
+### crm同步mbss商机接口
+POST http://117.73.13.196:30013/cmc/busiopts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### 系统管理api测试部分 ###
+GET 10.221.2.21:8711/bss/manage/internal/users/f7885364-d871-4123-ac33-4565b7aa01d5/datas
+
+###
+GET http://10.221.2.21.xip.io:9081/bss/manage/modules/users/menus
+
+### 菜单
+GET http://10.221.2.21:8711/bss/manage/modules/users/menus
+### 角色列表
+GET http://127.0.0.1:8762/bss/manage/modules/roles/query
+Authorization: bearer 1f8eee04-87b2-4d28-99ee-13ed8eac9cc3
+### 模块列表
+GET http://10.221.2.21.xip.io:9081/bss/manage/modules?start=0&length=10&searchValue=
+
+### 用户管理部分 ###
+GET http://10.221.2.21.xip.io:9081/user/v1/inner/list?length=10&start=0
+
+### 合同管理api测试部分 ###
+PUT http://127.0.0.1:8149/cmc/contract/v1/file-record?contractId=2020071861876
+###
+PUT http://10.221.2.21.xip.io:9081/cmc/contract/v1/file-record?contractId=2020072100697
+Authorization: bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICI0cDJpNkY2My1zbEVlRGRnRWFRNEZ3V0dRMVJzbHhHM2lqQmlORXRZTUljIn0.eyJqdGkiOiIyNDBhNjFiYy1iNTY4LTQ0ZjItYTZhNi03Nzk5NTc4N2Q4NzQiLCJleHAiOjE1OTUzNzk1MDMsIm5iZiI6MCwiaWF0IjoxNTk1Mzc5MjAzLCJpc3MiOiJodHRwczovL2F1dGgtY2xvdWQtZGV2Lmluc3B1cmNsb3VkLmNuL2F1dGgvcmVhbG1zL2FkLXRlc3QiLCJzdWIiOiI1MDgxYmZiNS01MmVkLTQ1OGYtODc3Yy0zYzM1MDhkNTA3MzQiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJic3MtY2xpZW50Iiwibm9uY2UiOiIxYWZmMzZkOS01NDQ3LTQ0MWItYjJmZC1mOTlhMDJiMzY4N2EiLCJhdXRoX3RpbWUiOjE1OTUzNzgzNDUsInNlc3Npb25fc3RhdGUiOiI5Nzk1ODc0Ny1kZTc3LTRkNzYtYjJmZi05YmQ0NzE2YTljNzYiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbIioiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbIm9mZmxpbmVfYWNjZXNzIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInNjb3BlIjoib3BlbmlkIGVtYWlsIHByb2ZpbGUiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJsY2JzcyIsInByZWZlcnJlZF91c2VybmFtZSI6ImxjYnNzIiwiZ2l2ZW5fbmFtZSI6ImxjYnNzIiwiZW1haWwiOiJsY2Jzc0BpbnNwdXIuY29tIn0.LYkZfAmFVUw00WN0BH7lZ8dlJbfiATh4U0TWNj52Fx9-C1C3lKRAaj5G6g3NQjQ_bmj38B4EdcrT13k7ectPS1MEGctTtr5m2EhmilsS8t5CqIEhNA4ZIJVaY5cpiG_jnAMRBQxPxdSGtz_QfzdyYa5OCfp4Gr-aGP-zjCscRISgpJg02A87OAgYyfO6czciyYvtTbTbFr7ruGjcvJk1GRuaWYt7GgmhgnouaKoANMF_DeumEfxnWAzNUiPg9pAD4FfjUaRKA6zvEtdSt86AYk8r8AVA2Fnhr8FnfVButCRVMTnuKgGVUR3c9I8OoVGnr2IKyVBCHGzoI-07K2atLw
+
+###
+###
+GET http://10.221.2.21.xip.io:9081/cmc/contract/v1
+
+###  商品中心部分  ###
+### 算费接口
+POST http://api.
+
+###
+
+
+
+

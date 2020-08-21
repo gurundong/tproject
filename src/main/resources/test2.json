@@ -1,0 +1,17 @@
+{
+  "centerId": "",
+  "contractId": "",
+  "contractMilepostCode": "",
+  "paymentResultType": "",
+  "contractStatus": "",
+  "deliverType": "",
+  "money": "",
+  "taxRate": "",
+  "grossProfileRate": "",
+  "planMonth": "",
+  "monthHeadRate": "",
+  "paymentBackRate": "",
+  "processComment": "",
+  "muPerson":"",
+  "operationManager": ""
+}

@@ -1,0 +1,81 @@
+<configuration debug="false" scan="true" scanPeriod="60">
+    <contextName>threadtest</contextName>
+    <!--日志持久化到宿主机的位置-->
+    <property name="path" value="logs"></property>
+    <property name="maxHistory" value="30"/>
+    <property name="maxFileSize" value="10MB"/>
+
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>debug</level>
+        </filter>
+        <encoder>
+            <pattern>%X{requestId} %date %level [%thread] %logger{36} [%file : %line] %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <appender name="info_file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${path}/threadtest.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- 每天一归档 -->
+            <fileNamePattern>${path}/threadtest.log.%d{yyyy-MM-dd}-%i.zip</fileNamePattern>
+            <maxHistory>${maxHistory}</maxHistory>
+            <maxFileSize>${maxFileSize}</maxFileSize>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%X{requestId} %date %level [%thread] %logger{36} [%file : %line] %msg%n
+            </pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>info</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>ACCEPT</onMismatch>
+        </filter>
+    </appender>
+
+    <appender name="failfile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${path}/fail.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 每天一归档 -->
+            <fileNamePattern>${path}/fail.log.%d{yyyy-MM-dd}-%i.zip</fileNamePattern>
+            <maxHistory>${maxHistory}</maxHistory>
+            <timeBasedFileNamingAndTriggeringPolicy
+                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>${maxFileSize}</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%X{requestId} %date %level [%thread] %logger{36} [%file : %line] %msg%n
+            </pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <appender name="servicelog_appender" class="ch.qos.logback.core.FileAppender">
+        <!-- 可以是相对路径，可以是绝对路径 -->
+        <file>${path}/service.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="serviceLog" level="INFO" additivity="false">
+        <appender-ref ref="servicelog_appender"/>
+    </logger>
+
+    <root>
+        <level value="info"/>
+        <appender-ref ref="console"/>
+        <appender-ref ref="info_file"/>
+    </root>
+    <!--additivity默认为true 会向上root传递 info里面也会打印出该信息-->
+    <logger name="faillogger" level="INFO" additivity="true">
+        <appender-ref ref="failfile"/>
+    </logger>
+</configuration>

@@ -1,0 +1,55 @@
+{
+  "orderType": "new",
+  "approvalDate": "2020-08-20",
+  "expChargeTime": "2020-08-20",
+  "orderId": "2-ORD-20200820-1266311",
+  "orderStatus": "complete",
+  "applyUserId": "349587@qq.com",
+  "expArchiveTime": "2020-08-20",
+  "consoleOrderFlowId": "",
+  "duration": "1",
+  "isAutoRenew": "Y",
+  "paperOrderId": "",
+  "orderWhat": "0",
+  "durationUnit": "D",
+  "setCount": "1",
+  "archiveTime": "2020-08-20",
+  "centerId": "202",
+  "orderSource": "BSS",
+  "userId": "bssCS01",
+  "createTime": "2020-08-20 10:49:53",
+  "appIdList": [
+    {
+      "appId": ""
+    }
+  ],
+  "dataSource": "1",
+  "projectId": "20200422153645855191",
+  "productList": [
+    {
+      "productLineCode": "EBS",
+      "payTime": "2020-08-20 10:50:41",
+      "subCreateTime": "2020-08-20 10:49:53",
+      "deleteFlag": false,
+      "instanceId": "8390350a-fcd0-431a-81a4-717f5f84f491",
+      "subOrderId": "1",
+      "serviceStartTime": "2020-08-20",
+      "serviceStatus": "alreadyOpened",
+      "instanceCreateTime": "2020-08-20 10:50:41",
+      "billType": "dailySettlement",
+      "instanceStatus": "Running",
+      "availableZone": "ha-zk-yd-zww1",
+      "instanceCount": "1",
+      "contractId": "",
+      "itemList": [
+        {
+          "code": "volume",
+          "type": "",
+          "value": "20"
+        }
+      ],
+      "region": "region-zhoukou-zww",
+      "productTypeCode": "SATA"
+    }
+  ]
+}
