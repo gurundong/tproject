@@ -1,331 +1,106 @@
 {
-  "centerId": "165",
-  "userId": "GZSQKLBGS",
-  "orderRoute": null,
-  "setCount": "1",
-  "consoleOrderFlowId": "",
-  "billType": "dailySettlement",
-  "duration": "1",
-  "durationUnit": "D",
-  "orderWhat": "0",
-  "orderSource": "BSS",
-  "orderStatus": "complete",
   "orderType": "new",
-  "serviceStartTime": null,
-  "serviceEndTime": null,
-  "consoleCustomization": null,
-  "totalMoney": null,
-  "actualMoney": null,
-  "isAutoDeducted": null,
+  "approvalDate": "2020-04-21",
+  "expChargeTime": "2020-05-05",
+  "orderId": "LES-ORD-20200427-6939570",
+  "orderStatus": "complete",
+  "applyUserId": "yyjl@inspur.com",
+  "expArchiveTime": "2020-05-04",
+  "consoleOrderFlowId": "",
+  "duration": "1",
   "isAutoRenew": "Y",
-  "couponId": null,
-  "creatorId": null,
-  "orderAttachUrl": null,
-  "receiptAttachUrl": null,
-  "orderAttachName": null,
-  "receiptAttachName": null,
-  "approvalDate": "2020-08-07",
-  "productList": [
-    {
-      "region": "region-ganzhou-hlw",
-      "availableZone": "jx-gz-yd-hlw",
-      "productLineCode": "ECS",
-      "productTypeCode": "ECS_std",
-      "billType": "dailySettlement",
-      "contractDateTime": null,
-      "instanceCount": "1",
-      "instanceId": "9046a578-8804-4079-baf4-73896adc6bc3",
-      "subOrderId": "1",
-      "instanceStatus": "Running",
-      "serviceStatus": "alreadyOpened",
-      "subPerPrice": null,
-      "payTime": "2020-08-07 11:33:16",
-      "serviceStartTime": null,
-      "serviceEndTime": null,
-      "contractId": "",
-      "contractIsFloor": null,
-      "contractName": null,
-      "ruleVersion": null,
-      "itemList": [
-        {
-          "code": "std_8C16G100G",
-          "name": null,
-          "unit": null,
-          "value": "1",
-          "type": "package",
-          "packageList": [
-            {
-              "type": "",
-              "code": "memory",
-              "name": null,
-              "unit": null,
-              "value": "16"
-            },
-            {
-              "type": "",
-              "code": "CPU",
-              "name": null,
-              "unit": null,
-              "value": "8"
-            },
-            {
-              "type": "",
-              "code": "sys_EBS_SATA",
-              "name": null,
-              "unit": null,
-              "value": "100"
-            }
-          ]
-        }
-      ],
-      "itemListJson": null,
-      "deleteFlag": false,
-      "busioptId": null,
-      "deleteTime": null,
-      "subCreateTime": "2020-08-07 10:56:49",
-      "instanceCreateTime": "2020-08-07 11:33:16",
-      "vendorId": null,
-      "vendorName": null
-    },
-    {
-      "region": "region-ganzhou-hlw",
-      "availableZone": "jx-gz-yd-hlw",
-      "productLineCode": "ECS",
-      "productTypeCode": "ECS_std",
-      "billType": "dailySettlement",
-      "contractDateTime": null,
-      "instanceCount": "1",
-      "instanceId": "a04f782b-c0b2-42dc-b0a7-b72a51ca8384",
-      "subOrderId": "1",
-      "instanceStatus": "Running",
-      "serviceStatus": "alreadyOpened",
-      "subPerPrice": null,
-      "payTime": "2020-08-07 11:33:21",
-      "serviceStartTime": null,
-      "serviceEndTime": null,
-      "contractId": "",
-      "contractIsFloor": null,
-      "contractName": null,
-      "ruleVersion": null,
-      "itemList": [
-        {
-          "code": "std_8C16G100G",
-          "name": null,
-          "unit": null,
-          "value": "1",
-          "type": "package",
-          "packageList": [
-            {
-              "type": "",
-              "code": "memory",
-              "name": null,
-              "unit": null,
-              "value": "16"
-            },
-            {
-              "type": "",
-              "code": "CPU",
-              "name": null,
-              "unit": null,
-              "value": "8"
-            },
-            {
-              "type": "",
-              "code": "sys_EBS_SATA",
-              "name": null,
-              "unit": null,
-              "value": "100"
-            }
-          ]
-        }
-      ],
-      "itemListJson": null,
-      "deleteFlag": false,
-      "busioptId": null,
-      "deleteTime": null,
-      "subCreateTime": "2020-08-07 10:56:49",
-      "instanceCreateTime": "2020-08-07 11:33:21",
-      "vendorId": null,
-      "vendorName": null
-    },
-    {
-      "region": "region-ganzhou-hlw",
-      "availableZone": "jx-gz-yd-hlw",
-      "productLineCode": "EBS",
-      "productTypeCode": "SSD",
-      "billType": "dailySettlement",
-      "contractDateTime": null,
-      "instanceCount": "1",
-      "instanceId": "bb460ed9-a81a-491b-a431-2bad3b3711bc",
-      "subOrderId": "1",
-      "instanceStatus": "Running",
-      "serviceStatus": "alreadyOpened",
-      "subPerPrice": null,
-      "payTime": "2020-08-07 11:33:16",
-      "serviceStartTime": null,
-      "serviceEndTime": null,
-      "contractId": "",
-      "contractIsFloor": null,
-      "contractName": null,
-      "ruleVersion": null,
-      "itemList": [
-        {
-          "code": "volume",
-          "name": null,
-          "unit": null,
-          "value": "500",
-          "type": "",
-          "packageList": null
-        }
-      ],
-      "itemListJson": null,
-      "deleteFlag": false,
-      "busioptId": null,
-      "deleteTime": null,
-      "subCreateTime": "2020-08-07 10:56:49",
-      "instanceCreateTime": "2020-08-07 11:33:16",
-      "vendorId": null,
-      "vendorName": null
-    },
-    {
-      "region": "region-ganzhou-hlw",
-      "availableZone": "jx-gz-yd-hlw",
-      "productLineCode": "EBS",
-      "productTypeCode": "SSD",
-      "billType": "dailySettlement",
-      "contractDateTime": null,
-      "instanceCount": "1",
-      "instanceId": "f5be433c-083d-4549-9dc0-2894a4352254",
-      "subOrderId": "1",
-      "instanceStatus": "Running",
-      "serviceStatus": "alreadyOpened",
-      "subPerPrice": null,
-      "payTime": "2020-08-07 11:33:21",
-      "serviceStartTime": null,
-      "serviceEndTime": null,
-      "contractId": "",
-      "contractIsFloor": null,
-      "contractName": null,
-      "ruleVersion": null,
-      "itemList": [
-        {
-          "code": "volume",
-          "name": null,
-          "unit": null,
-          "value": "500",
-          "type": "",
-          "packageList": null
-        }
-      ],
-      "itemListJson": null,
-      "deleteFlag": false,
-      "busioptId": null,
-      "deleteTime": null,
-      "subCreateTime": "2020-08-07 10:56:49",
-      "instanceCreateTime": "2020-08-07 11:33:21",
-      "vendorId": null,
-      "vendorName": null
-    },
-    {
-      "region": "region-ganzhou-hlw",
-      "availableZone": "jx-gz-yd-hlw",
-      "productLineCode": "CentOS",
-      "productTypeCode": "CentOS_std",
-      "billType": "dailySettlement",
-      "contractDateTime": null,
-      "instanceCount": "1",
-      "instanceId": "OS-20200807113316803219",
-      "subOrderId": "1",
-      "instanceStatus": "Running",
-      "serviceStatus": "alreadyOpened",
-      "subPerPrice": null,
-      "payTime": "2020-08-07 11:33:16",
-      "serviceStartTime": null,
-      "serviceEndTime": null,
-      "contractId": "",
-      "contractIsFloor": null,
-      "contractName": null,
-      "ruleVersion": null,
-      "itemList": [
-        {
-          "code": "license",
-          "name": null,
-          "unit": null,
-          "value": "1",
-          "type": "billingItem",
-          "packageList": null
-        }
-      ],
-      "itemListJson": null,
-      "deleteFlag": false,
-      "busioptId": null,
-      "deleteTime": null,
-      "subCreateTime": "2020-08-07 10:56:49",
-      "instanceCreateTime": "2020-08-07 11:33:16",
-      "vendorId": null,
-      "vendorName": null
-    },
-    {
-      "region": "region-ganzhou-hlw",
-      "availableZone": "jx-gz-yd-hlw",
-      "productLineCode": "CentOS",
-      "productTypeCode": "CentOS_std",
-      "billType": "dailySettlement",
-      "contractDateTime": null,
-      "instanceCount": "1",
-      "instanceId": "OS-20200807113322022572",
-      "subOrderId": "1",
-      "instanceStatus": "Running",
-      "serviceStatus": "alreadyOpened",
-      "subPerPrice": null,
-      "payTime": "2020-08-07 11:33:21",
-      "serviceStartTime": null,
-      "serviceEndTime": null,
-      "contractId": "",
-      "contractIsFloor": null,
-      "contractName": null,
-      "ruleVersion": null,
-      "itemList": [
-        {
-          "code": "license",
-          "name": null,
-          "unit": null,
-          "value": "1",
-          "type": "billingItem",
-          "packageList": null
-        }
-      ],
-      "itemListJson": null,
-      "deleteFlag": false,
-      "busioptId": null,
-      "deleteTime": null,
-      "subCreateTime": "2020-08-07 10:56:49",
-      "instanceCreateTime": "2020-08-07 11:33:21",
-      "vendorId": null,
-      "vendorName": null
-    }
-  ],
-  "createTime": "2020-08-07 10:56:49",
-  "orderId": "GZH-ORD-20200807-5805525",
   "paperOrderId": "",
-  "busioptId": null,
-  "isFloor": null,
-  "perYearPrice": null,
-  "archiveTime": null,
-  "expChargeTime": "2020-08-07",
-  "expArchiveTime": "2020-08-07",
-  "operateId": null,
-  "operateEmail": null,
-  "makeupSource": null,
-  "organName": null,
-  "applyUserId": "112@inspur.com",
-  "projectId": "20200807092117323443",
-  "dataSource": "1",
-  "systemSource": "ICP_BSS",
+  "orderWhat": "0",
+  "durationUnit": "D",
+  "setCount": "1",
+  "archiveTime": "2020-04-27",
+  "centerId": "282",
+  "orderSource": "BSS",
+  "userId": "874195",
+  "createTime": "2020-04-27 13:04:54",
   "appIdList": [
     {
-      "appId": "20200807100541723291"
+      "appId": "20200427130319017721"
     }
   ],
-  "sourceType": null
+  "dataSource": "1",
+  "projectId": "20200427130037595747",
+  "productList": [
+    {
+      "productLineCode": "EBS",
+      "payTime": "2020-04-27 14:04:30",
+      "subCreateTime": "2020-04-27 13:04:54",
+      "deleteFlag": false,
+      "instanceId": "7a1e8864-afa1-41e5-9e51-0266669369ec",
+      "subOrderId": "1",
+      "serviceStartTime": "2020-04-27",
+      "serviceStatus": "alreadyOpened",
+      "serviceEndTime": "2020-04-28 20:32:36",
+      "instanceCreateTime": "2020-04-27 14:04:30",
+      "billType": "dailySettlement",
+      "instanceStatus": "Destroyed",
+      "availableZone": "sc-ls-dx-zww",
+      "deleteTime": "2020-04-28 20:32:36",
+      "instanceCount": "1",
+      "contractId": "",
+      "itemList": [
+        {
+          "code": "volume",
+          "type": "",
+          "value": "1000"
+        }
+      ],
+      "region": "region-leshan-zww",
+      "productTypeCode": "EBS_std"
+    },
+    {
+      "productLineCode": "ECS",
+      "payTime": "2020-04-27 14:04:30",
+      "subCreateTime": "2020-04-27 13:04:54",
+      "deleteFlag": false,
+      "instanceId": "e984a715-7b4c-4d55-b58b-e93b2347a875",
+      "subOrderId": "1",
+      "serviceStartTime": "2020-04-27",
+      "serviceStatus": "alreadyOpened",
+      "serviceEndTime": "2020-04-28 20:23:38",
+      "instanceCreateTime": "2020-04-27 14:04:30",
+      "billType": "dailySettlement",
+      "instanceStatus": "Destroyed",
+      "availableZone": "sc-ls-dx-zww",
+      "deleteTime": "2020-04-28 20:23:38",
+      "instanceCount": "1",
+      "contractId": "",
+      "itemList": [
+        {
+          "code": "cmp_8C16G",
+          "type": "package",
+          "packageList": [
+            {
+              "code": "memory",
+              "type": "",
+              "value": "16"
+            },
+            {
+              "code": "CPU",
+              "type": "",
+              "value": "8"
+            },
+            {
+              "code": "sys_disk",
+              "type": "",
+              "value": "100"
+            },
+            {
+              "code": "sys_disk_type",
+              "type": "",
+              "value": "EBS_std"
+            }
+          ],
+          "value": "1"
+        }
+      ],
+      "region": "region-leshan-zww",
+      "productTypeCode": "ECS_CMP"
+    }
+  ]
 }

@@ -1,17 +1,29 @@
 {
-  "centerId": "",
-  "contractId": "",
-  "contractMilepostCode": "",
-  "paymentResultType": "",
-  "contractStatus": "",
-  "deliverType": "",
-  "money": "",
-  "taxRate": "",
-  "grossProfileRate": "",
-  "planMonth": "",
-  "monthHeadRate": "",
-  "paymentBackRate": "",
-  "processComment": "",
-  "muPerson":"",
-  "operationManager": ""
+  "productLineCode": "ECS",
+  "productTypeCode": "ASDF",
+  "skuCode": "reterte",
+  "skuName": "zyytc001",
+  "skuEnglishName": "zyytc001",
+  "supplyAllCustomers": "Y",
+  "skuSort": "100",
+  "itemList": [
+    {
+      "code": "color",
+      "productItemType": "billingItem",
+      "valueType": "enum",
+      "valueList": [
+        {
+          "value": "ye",
+          "name": "黄色",
+          "englishName": "yellow"
+        },
+        {
+          "value": "blu",
+          "name": "蓝色",
+          "englishName": "blue"
+        }
+      ]
+    }
+  ],
+  "description": "2222"
 }

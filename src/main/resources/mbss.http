@@ -1,3 +1,9 @@
+POST http://inspurbss.inspurcloud.cn/product/price
+Content-Type: application/json
+
+{"orderType":"new","billType":"dailySettlement","approvalDate":"2018-12-05","expChargeTime":"2018-12-05","orderId":"ORD-20181205-0000637-1","orderStatus":"complete","applyUserId":"40003414","expArchiveTime":"","consoleOrderFlowId":"GDCF-20181205-00001","duration":"1","isAutoRenew":"Y","paperOrderId":"","orderWhat":"0","durationUnit":"Y","setCount":"1","archiveTime":"","centerId":"273","orderSource":"console","userId":"40003414","createTime":"2018-12-05 14:42:55","appIdList":[{"appId":"8b9a5eff3d2242fe8f11"}],"dataSource":"1","projectId":"0000001463","productList":[{"productLineCode":"ECS","payTime":"2018-12-05 15:25:52","subCreateTime":"2018-12-05 14:42:55","deleteFlag":false,"instanceId":"279403f3-4a52-4049-9c23-7049c0c56ac6","subOrderId":"20181205144255797382","serviceStartTime":"2019-05-11 00:00:00","serviceStatus":"alreadyOpened","serviceEndTime":"","busioptId":"","instanceCreateTime":"2018-12-05 15:25:52","billType":"dailySettlement","instanceStatus":"Running","availableZone":"192.168.11.14_qx-compute-hp","deleteTime":"","instanceCount":"1","contractId":"","itemList":[{"code":"ECS_non_8C64G","name":"8核64G","type":"standard","packageList":[{"unit":"","code":"sys_disk_type","name":"系统盘类型","type":"impactFactor","value":"sata"},{"unit":"GiB","code":"memory","name":"内存","type":"billingItem","value":"64"},{"unit":"核","code":"CPU","name":"CPU","type":"billingItem","value":"8"},{"unit":"GiB","code":"sys_disk","name":"系统盘","type":"billingItem","value":"160"}],"value":"1"}],"region":"region-chengdu","productTypeCode":"ECS_nonstd"}]}
+
+###
 ### 测试单次专用
 #GET 127.0.0.1:8149/deliver/contract/synchronize/getAllSyncDataSum?lastMonth=2020-06
 GET http://10.221.2.21:8766/deliver/contract/synchronize/getAllSyncDataSum?lastMonth=2020-06
@@ -224,10 +230,14 @@ GET http://10.221.2.21.xip.io:9081/cmc/contract/v1
 
 ###  商品中心部分  ###
 ### 算费接口
-POST http://api.
+
+
+### 敏捷环境租户侧刷商品redis接口
+POST http://10.221.2.6.xip.io:9080/product/basic/shelf-all/publish
+
+### 敏捷环境租户侧-获取产品线
+GET http://10.221.2.6.xip.io:9080/product/list
 
 ###
-
-
 
 
