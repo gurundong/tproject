@@ -1,29 +1,62 @@
-{
-  "productLineCode": "ECS",
-  "productTypeCode": "ASDF",
-  "skuCode": "reterte",
-  "skuName": "zyytc001",
-  "skuEnglishName": "zyytc001",
-  "supplyAllCustomers": "Y",
-  "skuSort": "100",
-  "itemList": [
-    {
-      "code": "color",
-      "productItemType": "billingItem",
-      "valueType": "enum",
-      "valueList": [
-        {
-          "value": "ye",
-          "name": "黄色",
-          "englishName": "yellow"
-        },
-        {
-          "value": "blu",
-          "name": "蓝色",
-          "englishName": "blue"
-        }
-      ]
-    }
-  ],
-  "description": "2222"
-}
+[
+  {
+    "code": "ECS_nonstd_16C32G100G",
+    "name": "16核32G100G",
+    "packageList": [
+      {
+        "code": "CPU",
+        "name": "CPU",
+        "type": "billingItem",
+        "unit": "CORE",
+        "value": "16"
+      },
+      {
+        "code": "memory",
+        "name": "内存",
+        "type": "billingItem",
+        "unit": "GIB",
+        "value": "32"
+      },
+      {
+        "code": "sys_disk",
+        "name": "系统盘",
+        "type": "billingItem",
+        "unit": "GIB",
+        "value": "100"
+      },
+      {
+        "code": "sys_disk_type",
+        "name": "系统盘类型",
+        "type": "impactFactor",
+        "unit": "",
+        "value": "sata"
+      }
+    ],
+    "type": "package",
+    "value": "1"
+  },
+  {
+    "code": "os_type",
+    "name": "操作系统类型",
+    "type": "other",
+    "unit": ""
+  },
+  {
+    "code": "hw_architecture",
+    "name": "架构",
+    "type": "other",
+    "unit": ""
+  },
+  {
+    "code": "image_Windows",
+    "name": "Windows",
+    "type": "other",
+    "unit": ""
+  },
+  {
+    "code": "image_CentOS",
+    "name": "CentOS",
+    "type": "other",
+    "unit": ""
+  }
+]

@@ -81,23 +81,23 @@ public class multiThreadRequest {
 
 
 // 第二批同步
-        centerMap.put("211","孝感");
-        centerMap.put("180","日照");
-        centerMap.put("172","淄博");
-        centerMap.put("213","黄冈");
-        centerMap.put("178","泰安");
-        centerMap.put("168","抚州");
-        centerMap.put("120","泰州");
-        centerMap.put("194","焦作");
-        centerMap.put("278","绵阳");
-        centerMap.put("61","乌海");
-        centerMap.put("230","娄底");
-        centerMap.put("294","贵阳");
-        centerMap.put("183","德州");
+//        centerMap.put("211","孝感");
+//        centerMap.put("180","日照");
+//        centerMap.put("172","淄博");
+//        centerMap.put("213","黄冈");
+//        centerMap.put("178","泰安");
+//        centerMap.put("168","抚州");
+//        centerMap.put("120","泰州");
+//        centerMap.put("194","焦作");
+//        centerMap.put("278","绵阳");
+//        centerMap.put("61","乌海");
+//        centerMap.put("230","娄底");
+//        centerMap.put("294","贵阳");
+//        centerMap.put("183","德州");
 
         // 第三批同步
-//        centerMap.put("16","重庆");
-//        centerMap.put("176","潍坊");
+        centerMap.put("16","重庆");
+        centerMap.put("176","潍坊");
 //        centerMap.put("23","山东省");
 //        centerMap.put("170","济南");
 //        centerMap.put("296","遵义");
@@ -111,9 +111,9 @@ public class multiThreadRequest {
             String billUrl = url+"/deliver/contract/synchronize/bill?month=2020-07&centerId="+entry.getKey();
             String orderUrl = url+"/deliver/contract/synchronize/order?month=2020-07&centerId="+entry.getKey();
             MyTask myTask = new MyTask("同步名称："+entry.getValue()+",id:"+entry.getKey()+",同步账单",billUrl);
-//            MyTask myTask2 = new MyTask("同步名称："+entry.getValue()+",id:"+entry.getKey()+",同步订单",orderUrl);
+            MyTask myTask2 = new MyTask("同步名称："+entry.getValue()+",id:"+entry.getKey()+",同步订单",orderUrl);
             pool.execute(myTask);
-//            pool.execute(myTask2);
+            pool.execute(myTask2);
         }
         pool.shutdown();
     }
