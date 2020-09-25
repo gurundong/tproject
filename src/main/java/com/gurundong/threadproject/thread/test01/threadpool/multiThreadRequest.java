@@ -16,7 +16,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class multiThreadRequest {
     public static Logger logger = LoggerFactory.getLogger(multiThreadRequest.class);
     public static Logger serviceLogger = LoggerFactory.getLogger("serviceLog");
-
+//    长治\忻州\北京\天津\焦作\绵阳\乌海\四川省\晋中\泰安\重庆\济南\呼和浩特\淄博\潍坊\海南省
     public static void main(String[] args) {
         // 无界队列
         LinkedBlockingDeque queue = new LinkedBlockingDeque();
@@ -37,7 +37,6 @@ public class multiThreadRequest {
 //        centerMap.put("87","四平");
 //        centerMap.put("144","宿州");
 //        centerMap.put("293","凉山州");
-//        centerMap.put("303","昆明");
 //        centerMap.put("187","郑州");
 //        centerMap.put("95","齐齐哈尔");
 //        centerMap.put("262","百色");
@@ -57,7 +56,6 @@ public class multiThreadRequest {
 //        centerMap.put("42","保定");
 //        centerMap.put("29","甘肃省");
 //        centerMap.put("238","江门");
-//        centerMap.put("30","青海省");
 //        centerMap.put("48","太原");
 //        centerMap.put("147","亳州");
 //        centerMap.put("1227","苏州吴中区");
@@ -76,11 +74,6 @@ public class multiThreadRequest {
 //        centerMap.put("22","海南省");
 //        centerMap.put("21","广西自治区");
 //        centerMap.put("24","四川省");
-//        centerMap.put("175","烟台");
-//        centerMap.put("151","厦门");
-
-
-// 第二批同步
 //        centerMap.put("211","孝感");
 //        centerMap.put("180","日照");
 //        centerMap.put("172","淄博");
@@ -93,28 +86,39 @@ public class multiThreadRequest {
 //        centerMap.put("61","乌海");
 //        centerMap.put("230","娄底");
 //        centerMap.put("294","贵阳");
-//        centerMap.put("183","德州");
-
-        // 第三批同步
-        centerMap.put("16","重庆");
-        centerMap.put("176","潍坊");
+//        centerMap.put("16","重庆");
+//        centerMap.put("176","潍坊");
 //        centerMap.put("23","山东省");
 //        centerMap.put("170","济南");
 //        centerMap.put("296","遵义");
-//        centerMap.put("186","菏泽");
+//        centerMap.put("256","梧州");
+//        centerMap.put("336230367597821952","交付本部-其它");
+//        centerMap.put("173","枣庄");
+//        centerMap.put("352","海北州");
+
+
+        //        centerMap.put("186","菏泽");
+        //        centerMap.put("183","德州");
+        //        centerMap.put("175","烟台");
+//        centerMap.put("151","厦门");
+        //        centerMap.put("30","青海省");
+        //        centerMap.put("303","昆明");
 
 
         // 查看应同步数量接口 http://api.inspurbss.inspurcloud.cn/deliver/contract/synchronize/getAllSyncDataSum?lastMonth=2020-07&forceUpdate=N
         String url = "http://api.inspurbss.inspurcloud.cn";
 //        String url = "http://10.221.2.21:8766";
-        for (Map.Entry entry : centerMap.entrySet()){
-            String billUrl = url+"/deliver/contract/synchronize/bill?month=2020-07&centerId="+entry.getKey();
-            String orderUrl = url+"/deliver/contract/synchronize/order?month=2020-07&centerId="+entry.getKey();
-            MyTask myTask = new MyTask("同步名称："+entry.getValue()+",id:"+entry.getKey()+",同步账单",billUrl);
-            MyTask myTask2 = new MyTask("同步名称："+entry.getValue()+",id:"+entry.getKey()+",同步订单",orderUrl);
-            pool.execute(myTask);
-            pool.execute(myTask2);
-        }
+        String billUrl = url+"/deliver/contract/synchronize/bill?month=2020-08&orderId=fakeid-187-ZZS-201908-001";
+        MyTask myTask = new MyTask("同步名称：,同步账单",billUrl);
+        pool.execute(myTask);
+//        for (Map.Entry entry : centerMap.entrySet()){
+//            String billUrl = url+"/deliver/contract/synchronize/bill?month=2020-08&centerId="+entry.getKey();
+////            String orderUrl = url+"/deliver/contract/synchronize/order?month=2020-08&centerId="+entry.getKey();
+//            MyTask myTask = new MyTask("同步名称："+entry.getValue()+",id:"+entry.getKey()+",同步账单",billUrl);
+////            MyTask myTask2 = new MyTask("同步名称："+entry.getValue()+",id:"+entry.getKey()+",同步订单",orderUrl);
+//            pool.execute(myTask);
+////            pool.execute(myTask2);
+//        }
         pool.shutdown();
     }
 
