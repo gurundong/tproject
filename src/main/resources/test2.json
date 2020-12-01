@@ -1,2 +1,19 @@
+{
+  "orderId": "",
+  "contractId": "",
+  "contractInfo": {
 
+  },
+  "instanceList": [
 
+  ],
+  "changeOrderIds": [
+    {
+      "orderId": "",
+      "orderType": "",
+      "instanceIds": [
+
+      ]
+    }
+  ]
+}

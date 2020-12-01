@@ -1,1 +1,1 @@
-UPDATE `icp_bss`.`common_error_code` SET `error_message` = '没有属性值 \'%s\'' WHERE `id` = 17
+nohup java -Xms256m -Xmx256m -Xss512k -jar -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000 inspur-contract-scheduler*.jar >inspur_contract-scheduler.log &
