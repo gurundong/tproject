@@ -78,6 +78,18 @@ public class SingleLink {
         head.showList();
     }
 
+    // 带-> 的打印
+    public void showList(){
+        SingleLink.Node tmp = head.next;
+        while (tmp.next != null){
+            System.out.print(tmp.data);
+            System.out.print("->");
+            tmp = tmp.next;
+        }
+        System.out.print(tmp.data);
+        System.out.println();
+    }
+
     public boolean exist(Node node){
         return head.existNode(node);
     }

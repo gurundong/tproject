@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 /*
  dfs问题
+ 获取岛屿的数量
  */
 public class Q8 {
     public static void main(String[] args) {

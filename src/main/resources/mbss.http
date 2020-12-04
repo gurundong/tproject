@@ -110,11 +110,12 @@ GET http://api.inspurbss.inspurcloud.cn/deliver/income/report/sumincome?centerId
 # orderId	 订单号	  centerId	 云中心id
 DELETE http://10.221.2.21.xip.io:9081/order/fix/order?orderId=KM-BLORD-20200521-3278123&centerId=303
 
-### 刷新redis权限接口
+### mbss生产环境-刷新redis权限接口
 POST http://api.inspurbss.inspurcloud.cn/bss/manage/inner/refresh/users
 Content-Type: application/json
 
-{}
+{"userId": "255668ab-7162-4635-87c7-503c8f4d2c9c"}
+
 ### 刷新redis权限接口敏捷环境
 POST http://10.221.2.21.xip.io:9081/bss/manage/inner/refresh/users
 Content-Type: application/json
