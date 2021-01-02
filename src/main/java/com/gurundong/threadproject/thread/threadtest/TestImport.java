@@ -1,4 +1,4 @@
-package com.gurundong.threadproject.thread.test01;
+package com.gurundong.threadproject.thread.threadtest;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -13,8 +13,6 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ArrayBlockingQueue;
-
-import javax.swing.text.DefaultStyledDocument.ElementSpec;
 
 public class TestImport {
 	private ArrayBlockingQueue<String> l = new ArrayBlockingQueue<>(200);

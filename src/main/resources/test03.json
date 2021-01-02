@@ -1,106 +1,115 @@
-{
-  "orderType": "new",
-  "approvalDate": "2020-04-21",
-  "expChargeTime": "2020-05-05",
-  "orderId": "LES-ORD-20200427-6939570",
-  "orderStatus": "complete",
-  "applyUserId": "yyjl@inspur.com",
-  "expArchiveTime": "2020-05-04",
-  "consoleOrderFlowId": "",
-  "duration": "1",
-  "isAutoRenew": "Y",
-  "paperOrderId": "",
-  "orderWhat": "0",
-  "durationUnit": "D",
-  "setCount": "1",
-  "archiveTime": "2020-04-27",
-  "centerId": "282",
-  "orderSource": "BSS",
-  "userId": "874195",
-  "createTime": "2020-04-27 13:04:54",
-  "appIdList": [
-    {
-      "appId": "20200427130319017721"
-    }
-  ],
-  "dataSource": "1",
-  "projectId": "20200427130037595747",
-  "productList": [
-    {
-      "productLineCode": "EBS",
-      "payTime": "2020-04-27 14:04:30",
-      "subCreateTime": "2020-04-27 13:04:54",
-      "deleteFlag": false,
-      "instanceId": "7a1e8864-afa1-41e5-9e51-0266669369ec",
-      "subOrderId": "1",
-      "serviceStartTime": "2020-04-27",
-      "serviceStatus": "alreadyOpened",
-      "serviceEndTime": "2020-04-28 20:32:36",
-      "instanceCreateTime": "2020-04-27 14:04:30",
-      "billType": "dailySettlement",
-      "instanceStatus": "Destroyed",
-      "availableZone": "sc-ls-dx-zww",
-      "deleteTime": "2020-04-28 20:32:36",
-      "instanceCount": "1",
-      "contractId": "",
-      "itemList": [
-        {
-          "code": "volume",
-          "type": "",
-          "value": "1000"
-        }
-      ],
-      "region": "region-leshan-zww",
-      "productTypeCode": "EBS_std"
-    },
-    {
-      "productLineCode": "ECS",
-      "payTime": "2020-04-27 14:04:30",
-      "subCreateTime": "2020-04-27 13:04:54",
-      "deleteFlag": false,
-      "instanceId": "e984a715-7b4c-4d55-b58b-e93b2347a875",
-      "subOrderId": "1",
-      "serviceStartTime": "2020-04-27",
-      "serviceStatus": "alreadyOpened",
-      "serviceEndTime": "2020-04-28 20:23:38",
-      "instanceCreateTime": "2020-04-27 14:04:30",
-      "billType": "dailySettlement",
-      "instanceStatus": "Destroyed",
-      "availableZone": "sc-ls-dx-zww",
-      "deleteTime": "2020-04-28 20:23:38",
-      "instanceCount": "1",
-      "contractId": "",
-      "itemList": [
-        {
-          "code": "cmp_8C16G",
-          "type": "package",
-          "packageList": [
-            {
-              "code": "memory",
-              "type": "",
-              "value": "16"
-            },
-            {
-              "code": "CPU",
-              "type": "",
-              "value": "8"
-            },
-            {
-              "code": "sys_disk",
-              "type": "",
-              "value": "100"
-            },
-            {
-              "code": "sys_disk_type",
-              "type": "",
-              "value": "EBS_std"
-            }
-          ],
-          "value": "1"
-        }
-      ],
-      "region": "region-leshan-zww",
-      "productTypeCode": "ECS_CMP"
-    }
-  ]
-}
+[
+  {
+    "userId": "246d5f5e-cadc-4e03-a767-4d44a64ab9b0",
+    "setCount": "1",
+    "durationUnit": "D",
+    "billCycle": "20201227",
+    "billType": "monthlyCumulativeNetflowDailySettlement",
+    "startTime": "2020-12-26 00:00:00",
+    "endTime": "2020-12-27 00:00:00",
+    "duration": 1,
+    "discount": 1,
+    "discountId": "",
+    "discountName": "",
+    "productList": [
+      {
+        "region": "domestic",
+        "availableZone": "",
+        "productLineCode": "CDN",
+        "productTypeCode": "cdn_dynamic",
+        "instanceCount": "1",
+        "instanceId": "4434ce6c-6ec3-4264-842a-81831ae78fda",
+        "instanceName": "",
+        "price": 0.0,
+        "haveOtherItem": false,
+        "itemList": [
+          {
+            "code": "traffic",
+            "name": "访问流量",
+            "unit": "GiB",
+            "value": "26.5730",
+            "type": "billingItem",
+            "packageList": null
+          },
+          {
+            "code": "bandwidth",
+            "name": "带宽",
+            "unit": "Mbps",
+            "value": "0",
+            "type": "billingItem",
+            "packageList": null
+          },
+          {
+            "code": "qps",
+            "name": "请求数",
+            "unit": "万次",
+            "value": "0",
+            "type": "billingItem",
+            "packageList": null
+          }
+        ],
+        "itemListOther": null,
+        "itemListMthSum": [
+          {
+            "code": "traffic",
+            "name": "访问流量",
+            "unit": "GiB",
+            "value": "1632.5106",
+            "type": "billingItem",
+            "packageList": null
+          }
+        ]
+      },
+      {
+        "region": "overseas",
+        "availableZone": "",
+        "productLineCode": "CDN",
+        "productTypeCode": "cdn_dynamic",
+        "instanceCount": "1",
+        "instanceId": "617ac5e7-e643-44c2-a180-79ca480963a8",
+        "instanceName": "",
+        "price": 0.0,
+        "haveOtherItem": false,
+        "itemList": [
+          {
+            "code": "traffic",
+            "name": null,
+            "unit": null,
+            "value": "10.1348",
+            "type": null,
+            "packageList": null
+          },
+          {
+            "code": "bandwidth",
+            "name": null,
+            "unit": null,
+            "value": "0",
+            "type": null,
+            "packageList": null
+          },
+          {
+            "code": "qps",
+            "name": null,
+            "unit": null,
+            "value": "0",
+            "type": null,
+            "packageList": null
+          }
+        ],
+        "itemListOther": null,
+        "itemListMthSum": [
+          {
+            "code": "traffic",
+            "name": null,
+            "unit": null,
+            "value": "797.6809",
+            "type": null,
+            "packageList": null
+          }
+        ]
+      }
+    ]
+  }
+]
+
+

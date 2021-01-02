@@ -1,4 +1,4 @@
-package com.gurundong.threadproject.thread.test01;
+package com.gurundong.threadproject.thread.threadtest;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;

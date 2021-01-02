@@ -1,4 +1,4 @@
-package com.gurundong.threadproject.thread.test01.threadpool;
+package com.gurundong.threadproject.thread.threadtest.threadpool;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

@@ -20,6 +20,7 @@ dependencies {
 	compile 'org.redisson:redisson:3.8.2'
 	compile('org.springframework.boot:spring-boot-starter-data-redis')
 	compile('com.alibaba:fastjson:1.2.5')
+	compile('org.springframework.boot:spring-boot-starter-batch')
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
