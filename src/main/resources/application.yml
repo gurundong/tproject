@@ -1,0 +1,18 @@
+
+server:
+  port: 8080
+  tomcat:
+    max-http-header-size: 8192
+spring:
+  profiles:
+    active: prod
+  application:
+    name: inspur-system-service
+  datasource:
+    url: jdbc:mysql://10.110.1.26:3306/inspur_cloud_bss?useUnicode=true&characterEncoding=UTF8&connectTimeout=10000&socketTimeout=100000&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
+    username: bss
+    password: bss0926
+    driver-class-name: com.mysql.jdbc.Driver
+mybatis:
+  mapper-locations: classpath:mapper/**/*.xml
+  config-location: classpath:mybatis-config.xml

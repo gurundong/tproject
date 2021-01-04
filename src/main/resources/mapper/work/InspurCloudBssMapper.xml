@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gurundong.threadproject.thread.work.mapper.InspurCloudBssMapper">
+
+    <select id="getAllPermission" resultType="com.gurundong.threadproject.thread.work.bean.DO.ManagePermissionDO">
+        SELECT * FROM manage_permission WHERE isvalid = 1;
+    </select>
+
+    <insert id="initAllPermission">
+        INSERT INTO `inspur_cloud_bss`.`manage_user_permission`(
+            `id`, `user_id`, `permission_id`, `created_time`, `created_user`, `update_time`, `update_user`, `isvalid`, `role_id`)
+        VALUES
+        <foreach collection ="list" item="v" index= "k" separator =",">
+            (#{v.id}, #{v.userId}, #{v.permissionId}, NOW(), #{v.createdUser}, NOW(), '', b'1', '')
+        </foreach>
+    </insert>
+</mapper>
