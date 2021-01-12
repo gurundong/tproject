@@ -127,7 +127,7 @@ Content-Type: application/json
 POST http://10.221.2.21:8099/bss/manage/inner/refresh/users
 Content-Type: application/json
 
-{"userId": "93d39504-980f-432d-9a80-67f2d02694ad"}
+{"userId": "5081bfb5-52ed-458f-877c-3c3508d50734"}
 
 ###
 
