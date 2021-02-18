@@ -60,10 +60,10 @@ public class RestTemplateConfig {
         // 连接池的最大连接数
         cm.setMaxTotal(200);
         // 每个路由的最大连接数
-        cm.setDefaultMaxPerRoute(20);
+        cm.setDefaultMaxPerRoute(200);
         // 某个路由的最大连接数
-        HttpHost localhost = new HttpHost("www.baidu.com", 80);
-        cm.setMaxPerRoute(new HttpRoute(localhost), 50);
+//        HttpHost localhost = new HttpHost("www.baidu.com", 80);
+//        cm.setMaxPerRoute(new HttpRoute(localhost), 50);
 
         /**
          * 模拟浏览器cookie，设置到全局httpClient上，每次都发送都可以携带

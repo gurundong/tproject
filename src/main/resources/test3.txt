@@ -1,0 +1,67 @@
+2021-01-27 16:12:59.146  INFO 14515 --- [io-8765-exec-10] .c.b.c.p.s.MonthlyPaymentScheduleService : 应回款水库提交计划：[[398427504285048832]]
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d8feaf8]
+JDBC Connection [com.alibaba.druid.proxy.jdbc.ConnectionProxyImpl@7ba67256] will be managed by Spring
+==>  Preparing: select plan_month FROM contract_audit_lock cmal
+==> Parameters:
+<==    Columns: plan_month
+<==        Row: 2021-01
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d8feaf8]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d8feaf8] from current transaction
+==>  Preparing: select count(1) as countLockAndArchive FROM contract_receivables_detail crd WHERE 1=1 AND crd.id in ( ? ) AND (DATE_FORMAT(crd.expect_month_time,'%Y-%m') <= ? OR DATE_FORMAT(crd.expect_month_time,'%Y-%m') in ( ? ) )
+==> Parameters: 398427504285048832(String), 2020-12(String), 2021-01(String)
+<==    Columns: countLockAndArchive
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d8feaf8]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d8feaf8] from current transaction
+==>  Preparing: select count(1) as countLock from contract_monthly_schedule where plan_month in (SELECT plan_month FROM contract_audit_lock where type = 'lock') and id in (398427504285048832)
+==> Parameters:
+<==    Columns: countLock
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d8feaf8]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d8feaf8] from current transaction
+==>  Preparing: select count(1) countToEdit FROM contract_receivables_detail crd WHERE crd.id in (398427504285048832) AND crd.status = 'toedit'
+==> Parameters:
+<==    Columns: countToEdit
+<==        Row: 0
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d8feaf8]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d8feaf8] from current transaction
+==>  Preparing: select id,cms.plan_month, case when cms.expect_month_time < DATE_ADD( CURRENT_DATE, INTERVAL - DAY ( CURRENT_DATE ) + 1 DAY ) then 'archive' when cal.type is null then 'commit' else cal.type end as type from contract_monthly_schedule cms left join contract_audit_lock cal on cms.plan_month = cal.plan_month where id in ( ? )
+==> Parameters: 398427504285048832(String)
+<==    Columns: id, plan_month, type
+<==        Row: 398427504285048832, 2021-02, commit
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d8feaf8]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d8feaf8] from current transaction
+==>  Preparing: SELECT crd.id, CONCAT(crd.id,'_',DATE_FORMAT(crd.expect_month_time,'%Y-%m')) as rpId, crd.`code`, crd.center_id, crd.contract_id, CASE WHEN bci.contract_name IS NULL THEN crd.contract_name ELSE bci.contract_name END contract_name, crd.gross_margin_rate, CASE WHEN bci.tax_rate IS NULL THEN crd.tax_rate ELSE bci.tax_rate END tax_rate, bci.user_id, crd.recv_milepost, crd.expect_month_time, crd.expect_month_amount, CASE WHEN bci.tax_rate IS NULL THEN (crd.expect_month_amount /(1+crd.tax_rate / 100) * crd.gross_margin_rate / 100) ELSE (crd.expect_month_amount /(1+bci.tax_rate / 100) * crd.gross_margin_rate / 100) END expect_gross_margin, crd.recv_power_prediction, crd.returnable, cpn.actual_time actual_recv_time, CASE WHEN bci.tax_rate IS NULL THEN cpn.sum_money / (1+crd.tax_rate / 100) ELSE cpn.sum_money / (1+bci.tax_rate / 100) END actual_recv_income, CASE WHEN bci.tax_rate IS NULL THEN cp.within_sum_money / (1+crd.tax_rate / 100) ELSE cp.within_sum_money / (1+bci.tax_rate / 100) END actual_plan_recv_income, crd.manage_power_predict, crd.manage_power_income, crd.STATUS, crd.creator, crd.create_time, crd.modifier, crd.modify_time, CASE WHEN crd.expect_month_time < DATE_ADD( CURRENT_DATE, INTERVAL - DAY ( CURRENT_DATE ) + 1 DAY ) THEN 'archive' WHEN cal.type IS NULL THEN 'commit' ELSE cal.type END AS type FROM contract_receivables_detail crd LEFT JOIN busiopt_contract_info bci ON crd.contract_id = bci.contract_id LEFT JOIN ( SELECT contract_plan_id, sum( money ) sum_money, max( collection_time ) actual_time FROM contract_payment_new GROUP BY contract_plan_id ) cpn ON cpn.contract_plan_id = crd.id LEFT JOIN ( SELECT contract_plan_id, sum( money ) within_sum_money FROM contract_payment_new where create_status ='within' GROUP BY contract_plan_id ) cp ON cp.contract_plan_id = crd.id LEFT JOIN product_cloud_center pcc ON pcc.id = crd.center_id LEFT JOIN contract_audit_lock cal ON cal.plan_month = DATE_FORMAT(crd.expect_month_time,'%Y-%m') WHERE crd.id in ( ? )
+==> Parameters: 398427504285048832(String)
+<==    Columns: id, rpId, code, center_id, contract_id, contract_name, gross_margin_rate, tax_rate, user_id, recv_milepost, expect_month_time, expect_month_amount, expect_gross_margin, recv_power_prediction, returnable, actual_recv_time, actual_recv_income, actual_plan_recv_income, manage_power_predict, manage_power_income, STATUS, creator, create_time, modifier, modify_time, type
+<==        Row: 398427504285048832, 398427504285048832_2021-03, ZWY1028, 180, 270512198289, 日照市政务云服务提供商项目合同, 39.98, 6, 849907, 服务费（2020年下半年）, 2021-03-30, 6000000.00, 2263018.867924528, 50, 可能, null, null, null, null, null, save, renpeipei@inspur.com, 2021-01-04 10:48:39.0, renpeipei@inspur.com, 2021-01-27 16:12:44.0, commit
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d8feaf8]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d8feaf8] from current transaction
+==>  Preparing: UPDATE contract_monthly_schedule SET id = ?, rpid = ?, code = ?, center_id = ?, contract_id = ?, contract_name = ?, gross_margin_rate = ?, tax_rate = ?, user_id = ?, recv_milepost = ?, plan_month = ?, expect_month_time = ?, expect_month_amount = ?, expect_gross_margin = ?, recv_power_prediction = ?, returnable = ?, receivable_flag = ?, status = ?, count = count + 1, creator = ?, create_time = ?, modifier = ?, modify_time = ? WHERE id = ? and rpid = ?
+==> Parameters: 398427504285048832(Long), 398427504285048832_2021-02(String), ZWY1028(String), 180(Long), 270512198289(String), 日照市政务云服务提供商项目合同(String), 39.98(BigDecimal), 6(String), 849907(String), 服务费（2020年下半年）(String), 2021-03(String), 2021-03-30 00:00:00.0(Timestamp), 6000000.00(BigDecimal), 2263018.867924528(BigDecimal), 50(String), 可能(String), no(String), commit(String), renpeipei@inspur.com(String), 2021-01-04 10:48:39.0(Timestamp), gurundong@inspur.com(String), 2021-01-27 16:12:59.22(Timestamp), 398427504285048832(Long), 398427504285048832_2021-02(String)
+<==    Updates: 0
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d8feaf8]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d8feaf8] from current transaction
+==>  Preparing: update contract_receivables_detail set status = ?, count = count + 1, commit_time = now() where id in (398427504285048832)
+==> Parameters: commit(String)
+<==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d8feaf8]
+2021-01-27 16:12:59.232  INFO 14515 --- [io-8765-exec-10] c.i.c.b.c.p.v.PermissionValidation       : 超级管理员角色key:  system-service:data-auth:user:ea7b8719-8cdc-4df5-859a-103cf007fb77
+2021-01-27 16:12:59.233  INFO 14515 --- [io-8765-exec-10] c.i.c.b.c.p.v.PermissionValidation       : 超级管理员角色value: "superman"
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d8feaf8] from current transaction
+==>  Preparing: SELECT count(1) FROM contract_receivables_detail WHERE 1=1 AND expect_month_time < DATE_ADD(CURRENT_DATE, INTERVAL - DAY ( CURRENT_DATE ) + 1 DAY)
+==> Parameters:
+<==    Columns: count(1)
+<==        Row: 2773
+<==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d8feaf8]
+Transaction synchronization committing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d8feaf8]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d8feaf8]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d8feaf8]

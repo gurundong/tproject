@@ -1,0 +1,10 @@
+https://auth-cloud-dev.inspurcloud.cn/auth/realms/picp/protocol/openid-connect/auth?client_id=console&redirect_uri=http%3A%2F%2F10.221.2.4.xip.io%3A9080%2Forder%2Fmanage%2Forders%23state%3Db0633bbf-2b21-4d6b-8cf1-34b539442972%26session_state%3D75e68f86-5838-4ed3-a9ae-715b674f5ad2%26&state=d7bfcd48-5a8b-4cae-954f-edff1f60c6ff&nonce=6601661b-39e4-4c67-8990-f003990e11f0&response_mode=fragment&response_type=code&scope=openid
+
+
+
+http://10.221.2.4.xip.io:9080/account/recharge#state=5906fcf2-8b3b-457b-b68b-c0ec5977f63f&session_state=f936d225-962c-412a-9a43-64003450a66d&code=eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..LMYP3bQS6Bi7pU-tgoYsvQ.baVTzG5sJZzFllR1gQeUf107v35PgzlfaDokiHO_3Bs88XQfPHF0X0ykhiCPx7iUlI46OclLxQMZElfe3lmteqE8Pvo6K7jvxwOJFqjI7PPBHw_BeY_XMzg5dPO5Z8saQyU1wiRIObk25zUocrUrk-yHd1IBVJ96hLMCJHlzKNPwtVlAihRwsDCSf06AZ6hXs_FWtHNcYJFfJOOBSR0TfogIoV_utbaagF9Dd5-Ax1HEq6jPn_FWNOwRSWOWTa57.364aEyrLak_pLJKenWYCwg
+
+
+
+
+http://10.221.2.4.xip.io:9080/order/manage/orders#state=68bdbd54-0bbe-4339-97e9-5d7078598483&session_state=8b7db069-3099-47fb-b0fe-76cc7eff7670&code=eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2In0..aDAXSonFBwpm0sXjAkOrBg.zh_0__4JQpJ_OCkKEeXYt5tejOdk3MaStTNPXTf9lrgL8Is2x6_rYu0fsHvuslcoC5VFyEBfcVRe9DMca5jHiKampUfCkTOVz4J5efHSSER6Rlxq27LzOwMCICJveR0UdmXKVuhUOdgMnJQpxYQedr8cAcgQ76dJw_OVIGDIdUFvQQFZAOCoYt8A5yiVy10WzBxzUARTzSBIpF1g2Q-5UtTG8keyI8VN1YJKZ-yvTZfRLAPKKVwnmgtOtbvKbQxO.DjWg1-7Ew-Hjw9WtZ1fE1A

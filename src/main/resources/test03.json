@@ -1,115 +1,100 @@
 [
   {
-    "userId": "246d5f5e-cadc-4e03-a767-4d44a64ab9b0",
+    "userId": "863428",
     "setCount": "1",
     "durationUnit": "D",
-    "billCycle": "20201227",
-    "billType": "monthlyCumulativeNetflowDailySettlement",
-    "startTime": "2020-12-26 00:00:00",
-    "endTime": "2020-12-27 00:00:00",
+    "billCycle": "202009190000",
+    "deliverType": "formal",
+    "incomeDate": "2021-01-11 00:00:00",
+    "billType": "dailySettlement",
+    "startTime": "2020-09-18 00:00:00",
+    "endTime": "2020-09-19 00:00:00",
     "duration": 1,
-    "discount": 1,
-    "discountId": "",
-    "discountName": "",
+    "discount": null,
+    "discountId": null,
+    "discountName": null,
+    "sourceType": "oldOrder",
     "productList": [
       {
-        "region": "domestic",
-        "availableZone": "",
-        "productLineCode": "CDN",
-        "productTypeCode": "cdn_dynamic",
+        "region": "region-xiamen-hlw",
+        "centerId": "151",
+        "availableZone": "fj-xm-yd-hlw1",
+        "productLineCode": "ECS",
+        "productLineName": null,
+        "productTypeCode": "ECS_basic",
+        "productTypeName": null,
+        "orderId": "XMN-UORD-20200914-9609255",
+        "subOrderId": "e3a5a248c1575198a461a33d803903a7",
+        "projectId": null,
+        "projectName": null,
+        "appId": null,
+        "appName": null,
+        "ruleVersion": null,
+        "priceVersion": null,
+        "contractId": "270512198299",
+        "contractCode": "YX19022701",
+        "contractName": "厦门市政务云服务采购",
+        "ruleInfo": {
+          "ruleType": null,
+          "discount": null,
+          "priceType": null
+        },
         "instanceCount": "1",
-        "instanceId": "4434ce6c-6ec3-4264-842a-81831ae78fda",
-        "instanceName": "",
+        "instanceId": "fakePIDXMN-ORD-20200622-88449552020-06-22360440076365979648",
+        "instanceName": null,
         "price": 0.0,
+        "yearPrice": 4800.0,
         "haveOtherItem": false,
         "itemList": [
           {
-            "code": "traffic",
-            "name": "访问流量",
-            "unit": "GiB",
-            "value": "26.5730",
-            "type": "billingItem",
-            "packageList": null
+            "code": "ECS_vm_4C8G",
+            "name": "4核8G",
+            "unit": null,
+            "value": "1",
+            "type": "package",
+            "packageList": [
+              {
+                "code": "memory",
+                "name": "内存",
+                "type": "billingItem",
+                "unit": "GiB",
+                "value": "8"
+              },
+              {
+                "code": "CPU",
+                "name": "CPU",
+                "type": "billingItem",
+                "unit": "核",
+                "value": "4"
+              },
+              {
+                "code": "sys_disk",
+                "name": "系统盘",
+                "type": "billingItem",
+                "unit": "GiB",
+                "value": "40"
+              },
+              {
+                "code": "sys_disk_type",
+                "name": "系统盘类型",
+                "type": "impactFactor",
+                "unit": "",
+                "value": "sata"
+              }
+            ]
           },
           {
-            "code": "bandwidth",
-            "name": "带宽",
-            "unit": "Mbps",
-            "value": "0",
-            "type": "billingItem",
-            "packageList": null
-          },
-          {
-            "code": "qps",
-            "name": "请求数",
-            "unit": "万次",
-            "value": "0",
-            "type": "billingItem",
+            "code": "os_type",
+            "name": "操作系统类型",
+            "unit": "",
+            "value": null,
+            "type": "other",
             "packageList": null
           }
         ],
-        "itemListOther": null,
-        "itemListMthSum": [
-          {
-            "code": "traffic",
-            "name": "访问流量",
-            "unit": "GiB",
-            "value": "1632.5106",
-            "type": "billingItem",
-            "packageList": null
-          }
-        ]
-      },
-      {
-        "region": "overseas",
-        "availableZone": "",
-        "productLineCode": "CDN",
-        "productTypeCode": "cdn_dynamic",
-        "instanceCount": "1",
-        "instanceId": "617ac5e7-e643-44c2-a180-79ca480963a8",
-        "instanceName": "",
-        "price": 0.0,
-        "haveOtherItem": false,
-        "itemList": [
-          {
-            "code": "traffic",
-            "name": null,
-            "unit": null,
-            "value": "10.1348",
-            "type": null,
-            "packageList": null
-          },
-          {
-            "code": "bandwidth",
-            "name": null,
-            "unit": null,
-            "value": "0",
-            "type": null,
-            "packageList": null
-          },
-          {
-            "code": "qps",
-            "name": null,
-            "unit": null,
-            "value": "0",
-            "type": null,
-            "packageList": null
-          }
-        ],
-        "itemListOther": null,
-        "itemListMthSum": [
-          {
-            "code": "traffic",
-            "name": null,
-            "unit": null,
-            "value": "797.6809",
-            "type": null,
-            "packageList": null
-          }
-        ]
+        "itemListOther": null
       }
-    ]
+    ],
+    "ruleDiscount": "1"
   }
 ]
-
-
